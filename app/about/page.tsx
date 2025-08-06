@@ -5,9 +5,9 @@ import { useState } from "react";
 import Image from "next/image";
 import heroImg from "@/public/about1.jpg";
 import { CheckCircleIcon, CogIcon } from "@heroicons/react/24/outline";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
 
-const cardVariants = {
+const cardVariants : Variants = {
     hidden: { opacity: 0, x: 40 },
     visible: (i: number) => ({
       opacity: 1,
