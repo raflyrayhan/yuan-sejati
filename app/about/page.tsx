@@ -114,13 +114,13 @@ const cardVariants : Variants = {
   {
     "id": "skup-migas",
     "title": "SKUP – Surat Kemampuan Usaha Penunjang Migas",
-    "desc": "Surat Kemampuan Usaha Penunjang Migas No. 0913/19.07/DMB/2018 issued by the Directorate General of Oil and Gas, Ministry of Energy and Mineral Resources, to PT Yuan Sejati, certifying capability in both construction (Konstruksi) and non-construction (Pengoperasian & Pemeliharaan) support services for the oil & gas sector. Rated ★★★ with high domestic participation (738), effective from 02 April 2018.",
+    "desc": "Surat Kemampuan Usaha Penunjang Migas No. 0913/19.07/DMB/2018 issued by the Directorate General of Oil and Gas, Ministry of Energy and Mineral Resources, to PT Yuan Sejati, certifying capability in both construction (Konstruksi) and non-construction (Pengoperasian & Pemeliharaan) support services for the oil & gas sector.",
     "img": "/cert12.png"
   },
   {
     "id": "skup-migas-lampiran",
     "title": "Lampiran SKUP – Kapabilitas Usaha Penunjang Migas",
-    "desc": "Lampiran SKUP Migas No. 0913/19.07/DMB/2018 dated 02 April 2018 for PT Yuan Sejati, detailing company legal status (domestic entity, shareholding, key personnel), ISO management system certifications (ISO 9001, ISO 14001, ISO 18001), scope of services in mechanical & electrical construction and non-construction operations, and workforce qualifications (total 13 staff across specialists and technicians).",
+    "desc": "Lampiran SKUP Migas No. 0913/19.07/DMB/2018 dated 02 April 2018 for PT Yuan Sejati, detailing company legal status (domestic entity, shareholding, key personnel), ISO management system certifications (ISO 9001, ISO 14001, ISO 18001), scope of services in mechanical & electrical construction and non-construction operations, and workforce qualifications.",
     "img": "/cert13.png"
   }
 ];
@@ -414,7 +414,7 @@ export default function AboutPage() {
             Legal Certifications
           </motion.h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2">
             {certs.map((cert, i) => (
               <motion.div
                 key={cert.id}
