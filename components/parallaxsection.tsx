@@ -235,7 +235,25 @@ export default function CertGallery() {
       <Image src="/clients/ge.png" alt="client" width={100} height={100} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
     </div>
     <div className="flex justify-center">
-      <Image src="/clients/euroasiatic.jpg" alt="client" width={100} height={100} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
+      <Image src="/clients/bright.png" alt="client" width={150} height={150} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
+    </div>
+    <div className="flex justify-center">
+      <Image src="/clients/ikpt.png" alt="client" width={100} height={100} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
+    </div>
+    <div className="flex justify-center">
+      <Image src="/clients/rpe.jpg" alt="client" width={150} height={150} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
+    </div>
+    <div className="flex justify-center">
+      <Image src="/clients/solarturbin.png" alt="client" width={100} height={100} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
+    </div>
+    <div className="flex justify-center">
+      <Image src="/clients/salamander.jpg" alt="client" width={100} height={100} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
+    </div>
+    <div className="flex justify-center">
+      <Image src="/clients/srmd.jpeg" alt="client" width={100} height={100} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
+    </div>
+    <div className="flex justify-center">
+      <Image src="/clients/thyssenkrupp.png" alt="client" width={100} height={100} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
     </div>
 </div>
   </div>

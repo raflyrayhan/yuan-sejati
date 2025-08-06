@@ -67,16 +67,19 @@ export default function ContactPage() {
             />
           </div>
           <div>
-            <p>Komplek Fatmawati Mas Blok II – 221</p>
-            <p>Jl. RS Fatmawati No. 20, Jakarta 12430, Indonesia</p>
+            <h4 className="text-1xl text-extrabold text-black">Office:</h4>
+             <Image src="/mapslogo.png" alt="logomaps" width={90} height={90}/>
+            <span className="inline-flex items-left gap-1">
             <a
               href="https://maps.app.goo.gl/jJhZVDHRzopLRCWy7"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-black"
+              className="text-black hover:text-gray-600 hover:underline"
             >
-              View on Maps
+              <p>Komplek Fatmawati Mas Blok II – 221</p>
+            <p>Jl. RS Fatmawati No. 20, Jakarta 12430, Indonesia</p>
             </a>
+            </span>
           </div>
           <div className="space-y-3">
             <div className="flex items-center">
