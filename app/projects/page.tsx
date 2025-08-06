@@ -41,7 +41,7 @@ const projects: Project[] = [
     title: "EPC - JARGAS",
     subtitle: "Tarakan - North Kalimantan",
     date: "2019",
-    clientLogo: "/clients/esdm.png",
+    clientLogo: "/esdm.png",
     images: [
       "/projects/jargas1.png",
       "/projects/jargas2.png",
@@ -74,7 +74,7 @@ const projects: Project[] = [
     title: "EPC – Gas Custody Metering System in SKG-10",
     subtitle: "West Prabumulih – Prabumulih Field",
     date: "2015",
-    clientLogo: "/clients/pertaminaep.png",
+    clientLogo: "/pertaminaep.png",
     images: [
       "/projects/prabumulih1.png",
       "/projects/prabumulih2.png",
@@ -85,7 +85,7 @@ const projects: Project[] = [
     title: "Gas Dew Point",
     subtitle: "Bekasi – West Java",
     date: "2015",
-    clientLogo: "/clients/pertaminaep.png",
+    clientLogo: "/pertaminaep.png",
     images: [
       "/projects/bekasi1.png",
       "/projects/bekasi2.png",
@@ -219,7 +219,7 @@ export default function ProjectsPage() {
           <p className="text-sm text-slate-600">
             {project.subtitle} – {project.date}
           </p>
-          <div className="absolute top-6 right-6 w-32 h-16">
+          <div className="absolute top-6 right-6 w-32 h-29">
             <Image
               src={project.clientLogo}
               alt="Client logo"
@@ -236,7 +236,7 @@ export default function ProjectsPage() {
               src={project.images[0]}
               alt={`${project.title} large`}
               width={800}
-              height={600}
+              height={800}
               className="w-full h-[400px] object-cover"
             />
           </div>
