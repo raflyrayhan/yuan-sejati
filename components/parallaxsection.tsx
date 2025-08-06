@@ -276,7 +276,7 @@ export default function CertGallery() {
 
   
 </div>
-<div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 items-center p-8">
+<div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center p-8">
     <div className="flex justify-center">
       <Image src="/clients/patrask.png" alt="client" width={100} height={100} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
     </div>
@@ -288,6 +288,12 @@ export default function CertGallery() {
     </div>
     <div className="flex justify-center">
       <Image src="/clients/timas.jpeg" alt="client" width={100} height={100} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
+    </div>
+    <div className="flex justify-center">
+      <Image src="/hulumahakam.jpeg" alt="client" width={100} height={100} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
+    </div>
+    <div className="flex justify-center">
+      <Image src="/pertaminaep.png" alt="client" width={100} height={100} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
     </div>
     </div>
   </div>
