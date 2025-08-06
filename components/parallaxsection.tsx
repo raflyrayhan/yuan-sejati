@@ -255,7 +255,41 @@ export default function CertGallery() {
     <div className="flex justify-center">
       <Image src="/clients/thyssenkrupp.png" alt="client" width={100} height={100} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
     </div>
+    <div className="flex justify-center">
+      <Image src="/clients/hcml.png" alt="client" width={100} height={100} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
+    </div>
+    <div className="flex justify-center">
+      <Image src="/clients/hulurokan.png" alt="client" width={100} height={100} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
+    </div>
+    <div className="flex justify-center">
+      <Image src="/clients/indonesiapower.png" alt="client" width={100} height={100} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
+    </div>
+    <div className="flex justify-center">
+      <Image src="/clients/kpi.png" alt="client" width={100} height={100} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
+    </div>
+    <div className="flex justify-center">
+      <Image src="/clients/maspion.png" alt="client" width={100} height={100} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
+    </div>
+    <div className="flex justify-center">
+      <Image src="/clients/medco.png" alt="client" width={100} height={100} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
+    </div>
+
+  
 </div>
+<div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 items-center p-8">
+    <div className="flex justify-center">
+      <Image src="/clients/patrask.png" alt="client" width={100} height={100} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
+    </div>
+    <div className="flex justify-center">
+      <Image src="/clients/pgnsaka.png" alt="client" width={100} height={100} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
+    </div>
+    <div className="flex justify-center">
+      <Image src="/clients/spp.png" alt="client" width={100} height={100} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
+    </div>
+    <div className="flex justify-center">
+      <Image src="/clients/timas.jpeg" alt="client" width={100} height={100} className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition" />
+    </div>
+    </div>
   </div>
 </section>
 </>
