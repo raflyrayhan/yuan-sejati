@@ -79,8 +79,23 @@ export default function ContactPage() {
               <p>Komplek Fatmawati Mas Blok II – 221</p>
             <p>Jl. RS Fatmawati No. 20, Jakarta 12430, Indonesia</p>
             </a>
+            <br/>
+            <br/>
+           
             </span>
           </div>
+           <div>
+            <h4 className="text-1xl text-extrabold text-black">Warehouse:</h4>
+            <Image src="/mapslogo.png" alt="logomaps" width={90} height={90}/>
+            <a
+              href="https://maps.app.goo.gl/3hJjFs8pr5MmA85S8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-black hover:text-gray-600 hover:underline"
+              >
+                Techno Park Industrial Estate 2 Block H 9 No 16 Setu, BSD City <br/>- Tangerang Selatan 15314 Indonesia
+              </a>
+              </div>
           <div className="space-y-3">
             <div className="flex items-center">
               <span className="mr-3 text-rose-500">📞</span>
