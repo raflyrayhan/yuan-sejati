@@ -35,7 +35,7 @@ const services = [
     title: "Spare Part Supply",
     desc: "A reliable supply chain for genuine spare parts and consumables, ensuring fast replacement and minimal downtime for your critical installations.",
     img: "/services/spare-parts.jpg",
-  },
+  }
 ];
 
 export default function ServicesPage() {
@@ -71,7 +71,7 @@ export default function ServicesPage() {
         </motion.div>
 
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/25 to-transparent" />
 
         {/* Hero Text */}
         <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">

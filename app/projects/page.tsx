@@ -162,11 +162,14 @@ const otherExperiencesRight = [
 export default function ProjectsPage() {
   const [idx, setIdx] = useState(0);
   const project = projects[idx];
+  const [showOthers, setShowOthers] = useState(false);      // ← new state
 
   const prev = () =>
     setIdx((i) => (i === 0 ? projects.length - 1 : i - 1));
   const next = () =>
     setIdx((i) => (i === projects.length - 1 ? 0 : i + 1));
+
+  
 
   return (
     <main className="bg-white text-slate-900">
@@ -179,7 +182,7 @@ export default function ProjectsPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-black/15 to-transparent" />
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
           <motion.h1
             initial={{ opacity: 0, y: -40 }}
@@ -274,42 +277,46 @@ export default function ProjectsPage() {
           </button>
         </div>
 
+         <div className="flex justify-center mt-12">
+        <button
+          onClick={() => setShowOthers((v) => !v)}
+          className="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-black transition"
+        >
+          {showOthers ? "Hide Other Projects" : "See Other Projects"}
+        </button>
+        </div>
+
         {/* Other Project Experiences Table */}
-       <section className="mt-16 bg-white p-8 rounded-lg shadow-lg">
-            <h2 className="text-3xl font-bold mb-6">
-                Other Project Experiences
-            </h2>
-            <div className="overflow-x-auto">
-                <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-50">
-                </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
-                    {Array.from(
-                    {
-                        length: Math.max(
-                        otherExperiencesLeft.length,
-                        otherExperiencesRight.length
-                        ),
-                    },
-                    (_, i) => (
-                        <tr
-                        key={i}
-                        className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}
-                        >
-                        <td className="px-4 py-3 text-sm text-gray-600 align-top">
-                            {otherExperiencesLeft[i] || ""}
-                        </td>
-                        <td className=" py-8 text-gray-700 flex items-start border-r border-black"></td>
-                        <td className="px-4 py-3 text-sm text-gray-600 align-top">
-                            {otherExperiencesRight[i] || ""}
-                        </td>
-                        </tr>
-                    )
-                    )}
-                </tbody>
-                </table>
-            </div>
-            </section>
+        {showOthers && (
+        <motion.section
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
+          transition={{ duration: 0.4 }}
+          className="mt-8 bg-white p-8 rounded-lg shadow-lg max-w-6xl mx-auto overflow-x-auto"
+        >
+          <h2 className="text-2xl font-bold mb-4 text-center">Other Project Experiences</h2>
+          <table className="min-w-full divide-y divide-gray-200">
+            <thead className="bg-gray-50">
+            </thead>
+            <tbody className="bg-white divide-y divide-gray-200">
+              {Array.from(
+                { length: Math.max(otherExperiencesLeft.length, otherExperiencesRight.length) },
+                (_, i) => (
+                  <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                    <td className="px-4 py-3 text-sm text-gray-600 align-top">
+                      {otherExperiencesLeft[i] || ""}
+                    </td>
+                    <td className="w-4" />
+                    <td className="px-4 py-3 text-sm text-gray-600 align-top">
+                      {otherExperiencesRight[i] || ""}
+                    </td>
+                  </tr>
+                )
+              )}
+            </tbody>
+          </table>
+        </motion.section>
+      )}
       </div>
     </main>
   );

@@ -1,122 +1,77 @@
 "use client";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
-const certs = [
-  {
-    id: 1,
-    title: "ISO 9001:2015",
-    subtitle: "Quality Management System",
-    desc: "Certifies PT Yuan Sejati’s ability to consistently provide products and services that meet customer and regulatory requirements.",
-    img: "/cert1.png",
-  },
-  {
-    id: 2,
-    title: "ISO 14001:2015",
-    subtitle: "Environmental Management",
-    desc: "Confirms our commitment to sustainable practices and environmental compliance across all operations.",
-    img: "/cert2.png",
-  },
-  {
-    id: 3,
-    title: "ISO 45001:2018",
-    subtitle: "Occupational Health & Safety",
-    desc: "Demonstrates a robust health-and-safety management system protecting employees, clients and stakeholders.",
-    img: "/cert3.png",
-  },
-  {
-    id: 4,
-    title: "ISO 37001:2016",
-    subtitle: "Anti-Bribery Management",
-    desc: "Ensures effective controls and processes to prevent, detect and address bribery risks in our business.",
-    img: "/cert4.png",
-  },
-];
-
 export default function CertGallery() {
-  const [active, setActive] = useState(certs[0]);
 
   return (
     <>
-    <section id="certifications" className="py-16 md:py-24 bg-gray-300">
-      <div className="mx-auto max-w-7xl px-6">
-        <motion.h2
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-right mb-5 text-slate-900"
-        >
-          ISO Certified
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="md:text-[.9rem] text-right mb-2 text-black"
-          >
-          Certified to ISO 9001, ISO 14001, ISO 45001 and ISO 37001, with official recognition from major energy regulators.
-        </motion.p>
+    <section id="vision-mission" className="py-16 md:py-24 bg-white">
+  <div className="mx-auto max-w-7xl px-6 text-center">
+    <motion.h2
+      initial={{ opacity: 0, y: -20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="text-3xl md:text-4xl font-bold text-slate-900 mb-12"
+    >
+      Vision &amp; Mission
+    </motion.h2>
 
-        <div className="grid lg:grid-cols-12 gap-10">
-          {/* Left: Image preview */}
-          <div className="lg:col-span-5 flex items-center justify-center">
-            <motion.div
-              key={active.id}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4 }}
-              className="bg-white rounded-2xl shadow-xl p-2"
-            >
-              <Image
-                src={active.img}
-                alt={active.title}
-                width={200}
-                height={200}
-                className="w-full h-auto object-contain rounded-lg"
-              />
-            </motion.div>
-          </div>
+    <div className="grid gap-8 lg:grid-cols-3">
+      {/* Vision */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.1 }}
+        className="bg-amber-50 rounded-2xl shadow-lg p-8"
+      >
+        <span className="inline-block bg-amber-500 text-white text-xs font-semibold uppercase rounded-full px-3 py-1 mb-4">
+          Vision
+        </span>
+        <p className="text-slate-800 leading-relaxed">
+          To become the one-stop solution provider for metering systems and related packages across Indonesia and beyond.
+        </p>
+      </motion.div>
 
-          {/* Right: Info + list */}
-          <div className="lg:col-span-7 flex flex-col justify-center">
-            <motion.div
-              key={active.title}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.4 }}
-              className="bg-white rounded-2xl shadow-xl p-6 md:p-8"
-            >
-              <h3 className="text-2xl font-bold text-slate-900">{active.title}</h3>
-              <p className="text-sm text-slate-600 mb-3">{active.subtitle}</p>
-              <p className="text-slate-700 leading-relaxed">{active.desc}</p>
-            </motion.div>
+      {/* Values */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2 }}
+        className="bg-slate-50 rounded-2xl shadow-lg p-8"
+      >
+        <span className="inline-block bg-slate-700 text-white text-xs font-semibold uppercase rounded-full px-3 py-1 mb-4">
+          Values
+        </span>
+        <ul className="text-slate-800 list-disc list-inside space-y-2">
+          <li>Honestly</li>
+          <li>Competency</li>
+          <li>Continuous Improvement</li>
+        </ul>
+      </motion.div>
 
-            {/* Certificate list */}
-            <div className="mt-8 space-y-2">
-              {certs.map((cert, i) => (
-                <motion.button
-                  key={cert.id}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.05 }}
-                  onClick={() => setActive(cert)}
-                  className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-200 ${
-                    active.id === cert.id
-                      ? "bg-slate-500 text-white shadow-md"
-                      : "bg-white hover:bg-orange-50 text-slate-800"
-                  }`}
-                >
-                  {cert.title}
-                </motion.button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-     
-    </section>
+      {/* Mission */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3 }}
+        className="bg-blue-50 rounded-2xl shadow-lg p-8"
+      >
+        <span className="inline-block bg-blue-500 text-white text-xs font-semibold uppercase rounded-full px-3 py-1 mb-4">
+          Mission
+        </span>
+        <p className="text-slate-800 leading-relaxed">
+          Provide excellent products and services safely at a competitive budget, empowering clients to measure, manage and monetize energy with confidence.
+        </p>
+      </motion.div>
+    </div>
+  </div>
+</section>
+
      <section>
       <div className="mx-auto max-w-7xl p-12">
   <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-2 pt-2">

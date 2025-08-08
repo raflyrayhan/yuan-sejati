@@ -4,7 +4,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import heroImg from "@/public/about1.jpg";
-import { CheckCircleIcon, CogIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 
 const cardVariants : Variants = {
@@ -162,7 +161,7 @@ export default function AboutPage() {
   </motion.div>
 
   {/* Gradient overlay */}
-  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/70 to-transparent" />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-black/15 to-transparent" />
 
   {/* Text */}
   <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
@@ -304,29 +303,6 @@ export default function AboutPage() {
         </div>
       </div>
     </section>
-
-      {/* NUMBERS */}
-      <section className="py-16 bg-white">
-        <div className="mx-auto max-w-5xl px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            By the Numbers
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-            {[
-              { val: "400+", label: "Skids Installed" },
-              { val: "80+", label: "EPC Projects" },
-              { val: "42", label: "Years Experience" },
-            ].map((item) => (
-              <div key={item.label} className="p-6">
-                <p className="text-5xl font-extrabold text-orange-600">
-                  {item.val}
-                </p>
-                <p className="mt-2 text-lg text-slate-700">{item.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="py-16 md:py-24 bg-white">
       <div className="mx-auto max-w-6xl px-6">
@@ -486,117 +462,150 @@ export default function AboutPage() {
     </>
 
       {/* SERVICES */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
-      <div className="mx-auto max-w-5xl px-6">
-        <motion.h2
-          className="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-900"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+    <section className="py-16 md:py-24 bg-white">
+  <div className="mx-auto max-w-6xl px-6">
+    <motion.h2
+      className="text-4xl font-semibold text-center text-gray-900 mb-12"
+      initial={{ opacity: 0, y: -20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
+      What We Deliver
+    </motion.h2>
+
+    <div className="space-y-16">
+      {/* Industry Sector */}
+      <motion.div
+        className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-200 pb-12"
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <div className="w-full md:w-1/2 mb-6 md:mb-0">
+          <h3 className="text-2xl font-semibold text-gray-800">Industry Sector</h3>
+          <ul className="mt-4 space-y-4 text-gray-700">
+            <li>
+              <strong>Oil & Gas:</strong>{" "}
+              Custody Metering System, System Package, Small EPC.
+              <p className="text-sm text-gray-500 mt-2">
+                We provide advanced metering solutions, from design to service, including system packages for the oil & gas industry.
+              </p>
+            </li>
+            <li>
+              <strong>Power:</strong>{" "}
+              Custody Metering System, System Package, Small EPC.
+              <p className="text-sm text-gray-500 mt-2">
+                Offering reliable custody metering and essential power system packages to ensure efficiency and accuracy in operations.
+              </p>
+            </li>
+            <li>
+              <strong>Petrochemical:</strong>{" "}
+              Custody Metering System, System Package, Small EPC.
+              <p className="text-sm text-gray-500 mt-2">
+                Tailored solutions for the petrochemical sector, including custody metering systems and various system packages.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div className="w-full md:w-1/2 border-l border-gray-200 pl-8">
+          <div className="text-sm text-gray-500">
+            <span className="block font-medium text-gray-800">Key Industries</span>
+            <span className="block mt-2">Oil & Gas, Power, Petrochemical</span>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Product Coverage */}
+      <motion.div
+        className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-200 pb-12"
+        initial={{ opacity: 0, x: 20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <div className="w-full md:w-1/2 mb-6 md:mb-0">
+          <h3 className="text-2xl font-semibold text-gray-800">Product Coverage</h3>
+          <ul className="mt-4 space-y-4 text-gray-700">
+            <li>
+              <strong>Metering System:</strong> Gas Metering, Liquid Metering, Prover.
+              <p className="text-sm text-gray-500 mt-2">
+                We offer precision metering systems for gas and liquid, along with prover systems to ensure the highest accuracy.
+              </p>
+            </li>
+            <li>
+              <strong>Component:</strong> Flow Meter, Analyzer, Valve, HDPE Fitting.
+              <p className="text-sm text-gray-500 mt-2">
+                Essential components for various industrial applications, including flow meters, analyzers, valves, and fittings.
+              </p>
+            </li>
+            <li>
+              <strong>System Package:</strong> Gas Conditioning, Metering Stations, Small EPC.
+              <p className="text-sm text-gray-500 mt-2">
+                Complete system packages for gas conditioning and metering, along with small EPC services for efficient implementation.
+              </p>
+            </li>
+            <li>
+              <strong>System Control:</strong> SCADA, Shutdown System, HIPPS, CEMS.
+              <p className="text-sm text-gray-500 mt-2">
+                Advanced control systems for operations management, safety, and environmental monitoring, including SCADA and CEMS.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div className="w-full md:w-1/2 border-l border-gray-200 pl-8">
+          <div className="text-sm text-gray-500">
+            <span className="block font-medium text-gray-800">Product Types</span>
+            <span className="block mt-2">Metering Systems, System Control, Components</span>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Zigzag Image Preview */}
+      <div className="flex flex-col md:flex-row justify-between items-center">
+        {/* Image 1 */}
+        <motion.div
+          className="w-full md:w-1/2 relative mb-6 md:mb-0"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          What We Deliver
-        </motion.h2>
+          <div className="absolute inset-0 transform -rotate-6">
+            <Image
+              src="/today.png"  // Image should be in the public directory
+              alt="Cosmetic Product 1"
+              width={500}
+              height={350}
+              className="object-cover w-full h-full rounded-lg shadow-lg"
+            />
+          </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Industry Sector */}
-          <motion.div
-            className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="flex items-center mb-4">
-              <CogIcon className="h-6 w-6 text-green-600 mr-2" />
-              <h3 className="text-2xl font-semibold text-gray-800">
-                Industry Sector
-              </h3>
-            </div>
-            <ul className="space-y-4 text-gray-700">
-              <li className="flex">
-                <CheckCircleIcon className="h-5 w-5 text-green-500 flex-shrink-0 mr-2" />
-                <span>
-                  <span className="font-medium">Oil &amp; Gas:</span> Custody
-                  Metering System (Design, Engineering, Supply, Upgrade,
-                  Service &amp; Recalibration); System Package (Shutdown Valve,
-                  HIPPS, Filter, Pressure Vessel, Multiphase Flow Meter); Small
-                  EPC
-                </span>
-              </li>
-              <li className="flex">
-                <CheckCircleIcon className="h-5 w-5 text-green-500 flex-shrink-0 mr-2" />
-                <span>
-                  <span className="font-medium">Power:</span> Custody Metering
-                  System (Design, Engineering, Supply, Upgrade, Service &
-                  Recalibration); System Package (Filter, Pressure Vessel, Gas
-                  Conditioning System); Small EPC
-                </span>
-              </li>
-              <li className="flex">
-                <CheckCircleIcon className="h-5 w-5 text-green-500 flex-shrink-0 mr-2" />
-                <span>
-                  <span className="font-medium">Petrochemical:</span> Custody
-                  Metering System; System Package (Shutdown Valve, Filter,
-                  Pressure Vessel, Gas Conditioning System, Analyzer Package);
-                  Small EPC
-                </span>
-              </li>
-            </ul>
-          </motion.div>
-
-          {/* Product Coverage */}
-          <motion.div
-            className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <div className="flex items-center mb-4">
-              <CogIcon className="h-6 w-6 text-green-600 mr-2" />
-              <h3 className="text-2xl font-semibold text-gray-800">
-                Product Coverage
-              </h3>
-            </div>
-            <ul className="space-y-4 text-gray-700">
-              <li className="flex">
-                <CheckCircleIcon className="h-5 w-5 text-green-500 flex-shrink-0 mr-2" />
-                <span>
-                  <span className="font-medium">Metering System:</span> Gas
-                  Metering, Liquid Metering, MRS, Prover
-                </span>
-              </li>
-              <li className="flex">
-                <CheckCircleIcon className="h-5 w-5 text-green-500 flex-shrink-0 mr-2" />
-                <span>
-                  <span className="font-medium">Component:</span> Pressure
-                  Regulator, Flow Meter, Analyzer, Valve, Gas Chromatograph,
-                  HDPE Fitting
-                </span>
-              </li>
-              <li className="flex">
-                <CheckCircleIcon className="h-5 w-5 text-green-500 flex-shrink-0 mr-2" />
-                <span>
-                  <span className="font-medium">System Package:</span> Gas
-                  Conditioning System, Oil &amp; Gas Production Package,
-                  Gathering Station, Metering Station, Analyzer Package, Small
-                  EPC
-                </span>
-              </li>
-              <li className="flex">
-                <CheckCircleIcon className="h-5 w-5 text-green-500 flex-shrink-0 mr-2" />
-                <span>
-                  <span className="font-medium">System Control:</span> Metering
-                  Supervisory System, SCADA, Shutdown System, HIPPS, Terminal
-                  Automation, CEMS, Flare Meter
-                </span>
-              </li>
-            </ul>
-          </motion.div>
-        </div>
+        {/* Image 2 */}
+        <motion.div
+          className="w-full md:w-1/2 relative"
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="absolute inset-0 transform rotate-6">
+            <Image
+              src="/projects/dhu.jpg"  // Image should be in public/projects
+              alt="Cosmetic Product 2"
+              width={500}
+              height={350}
+              className="object-cover w-full h-full rounded-lg shadow-lg"
+            />
+          </div>
+        </motion.div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
 </div>
     </main>
   );

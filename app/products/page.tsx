@@ -20,7 +20,7 @@ const meteringProducts: Product[] = [
       "High-precision turbine flow meters for liquid hydrocarbons, delivering accurate volume and flow rate data even under turbulent conditions.",
   },
   {
-    img: "/products/orifice-meter.jpeg",
+    img: "/products/orifice-meter.png",
     title: "Orifice Gas Metering",
     desc:
       "AGA- and API-compliant orifice plate assemblies for reliable natural gas measurement, with easy calibration and minimal maintenance.",
@@ -147,7 +147,7 @@ export default function ProductsPage() {
             />
           </motion.div>
         </motion.div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-black/15 to-transparent" />
         <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
           <motion.h1
             className="text-5xl md:text-7xl font-extrabold text-white"

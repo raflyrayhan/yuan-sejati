@@ -64,7 +64,7 @@ export default function HeroCarousel() {
               i === index ? "scale-110" : "scale-100"
             }`}
           />
-          <div className="absolute inset-0 bg-black/65" />
+          <div className="absolute inset-0 bg-black/15" />
         </div>
       ))}
 
